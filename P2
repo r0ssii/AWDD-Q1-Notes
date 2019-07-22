@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Form Design 102 Template</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/myFormStyles.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Add Bank Account Form</h2>
+
+                    </div>
+
+                    <div class="card-body">
+                        <form class="form" action="store.php" method="post">
+                            <div class="form-group">
+                                <label for="name">Account name:</label>
+                                <input class="form-control" type="text" placeholder="Name for bank account" id="name" name="name" value="" />
+                                <small class="form-text error" id="name-error">Account name is required</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="number">Account number:</label>
+                                <input class="form-control" type="text" placeholder="Bank account number" id="number" name="number" />
+                                <small class="form-text error" id="number-error">Bank account number is required</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="code">Bank sort code:</label>
+                                <input class="form-control" type="text" placeholder="Bank sort code" id="code" name="code" />
+                                <small class="form-text error" id="code-error">Bank sort code is required</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="balance">Current balance:</label>
+                                <input class="form-control" type="text" placeholder="Current balance" id="balance" name="balance" />
+                                <small class="form-text error" id="balance-error">Current balance is required</small>
+                            </div>
+
+                            <div class="form-group">
+                                <hr>
+                                <label>Select bank account type:</label>
+                                <br>
+                                <div class="form-check form-check-inline">
+
+                                    <input class="form-check-input" type="radio" name="type" id="type-current" value="current">
+                                    <label class="form-check-label" for="type-current">Current</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+
+                                    <input class="form-check-input" type="radio" name="type" id="type-savings" value="savings">
+                                    <label class="form-check-label" for="type-savings">Savings</label>
+
+                                </div>
+
+                                <div class="form-check form-check-inline">
+
+                                    <input class="form-check-input" type="radio" name="type" id="type-fixed" value="fixed">
+                                    <label class="form-check-label" for="type-fixed">Fixed term</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+
+                                    <input class="form-check-input" type="radio" name="type" id="type-variable" value="variable">
+                                    <label class="form-check-label" for="type-variable">Variable term</label>
+
+                                </div>
+                                <small class="form-text error" id="type-error">Bank account type is required</small>
+                            </div>
+
+                            <div class="form-group">
+                                <hr>
+                                <label>Select customer contact points:</label>
+                                <br>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" name="contact[]" id="contact-email" value="email">
+                                    <label class="form-check-label" for="contact-email">Email</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" name="contact[]" id="contact-phone" value="phone">
+                                    <label class="form-check-label" for="contact-phone">Phone</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" name="contact[]" id="contact-post" value="post">
+                                    <label class="form-check-label" for="contact-post">Post</label>
+                                </div>
+
+                                <small class="form-text error" id="contact-error">Please choose at least one customer contact point</small>
+                            </div>
+                            <hr>
+
+                            <input class="btn btn-primary mb-2" type="submit" id="submit" name="submit" value="Store" />
+                            <input class="btn btn-secondary mb-2" type="reset" id="reset" name="reset" value="Reset Form" />
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
