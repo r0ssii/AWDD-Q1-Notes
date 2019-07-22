@@ -1,0 +1,67 @@
+
+Use XXAMP
+
+$conn = Connection::getInstance();
+        $stmt = $conn->prepare($sql);
+        $success = $stmt->execute($params);
+
+
+
+// Question 1
+
+  'email' => $this->email
+  
+   $sql = "INSERT INTO bank_accounts(
+                    name, number, code, balance, type, contact, email
+                ) VALUES (
+                    :name, :number, :code, :balance, :type, :contact, :email
+                )";
+                
+//Question 2
+
+if (!validateCheckBoxes(contactBoxes, 1, 3)) {
+			contactError.innerHTML = "Please select at least one customer contact point";
+			valid = false;
+		}
+    
+
+var emailField   = document.getElementById("email");
+var email   = emailField.value;
+var emailError   = document.getElementById("email-error");
+emailError.innerHTML   = "";
+
+//Question 3
+
+if (email === "") {
+			emailError.innerHTML = "Please enter an email address";
+			valid = false;
+		}
+        else if (!isValidEmailFormat(email)) {
+            emailError.innerHTML = "Email address format is invalid";
+			valid = false;
+        }
+		else if (email.length > 50) {
+			emailError.innerHTML = "Email address must be less that 50 characters";
+			valid = false;
+		}
+    
+    
+  // Question 4
+  
+   <label for="email">Email:</label>
+            <input type="text"  placeholder="Email address" id="email" name="email" value="<?= old('email') ?>" />
+            <p id="email-error"><?= error('email') ?></p>
+            
+  //store// 
+  
+  'email' => 'required|valid_email|max_len,50'
+   'email' => 'trim|sanitize_string'
+   $bank_account->email = $validated_data['email'];
+   
+ //Question 5
+ <tr>Email:</tr>
+ <td><?= $bank_account->email ?></td>
+ 
+ 
+ 
+            
