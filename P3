@@ -1,0 +1,29 @@
+my Style Forms
+
+.error {
+    color: #d84b4b;
+}
+
+.card-body {
+    background-color: #3c3c3c;
+}
+
+label {
+    font-weight: bold;
+    color: #d6d6d6;
+}
+
+.form-check .form-check-label {
+    font-weight: normal;
+    color: #d6d6d6;
+}
+
+input.form-control {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: white;
+}
+
+hr {
+    background-color: white;
+}
